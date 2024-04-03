@@ -1,4 +1,4 @@
-module github.com/hiscaler/woocommerce-go
+module github.com/matewolf/woocommerce-go
 
 go 1.17
 
