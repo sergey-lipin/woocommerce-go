@@ -2,9 +2,11 @@ package woocommerce
 
 import (
 	"fmt"
+
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+
+	"github.com/hiscaler/woocommerce-go/entity"
 )
 
 type productService service
@@ -12,7 +14,7 @@ type productService service
 // Products
 
 type ProductsQueryParams struct {
-	queryParams
+	QueryParams
 	Search        string  `url:"search,omitempty"`
 	After         string  `url:"after,omitempty"`
 	Before        string  `url:"before,omitempty"`

@@ -3,15 +3,17 @@ package woocommerce
 import (
 	"errors"
 	"fmt"
+
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+
+	"github.com/hiscaler/woocommerce-go/entity"
 )
 
 type productShippingClassService service
 
 type ProductShippingClassesQueryParams struct {
-	queryParams
+	QueryParams
 	Search    string `url:"search,omitempty"`
 	Exclude   []int  `url:"exclude,omitempty"`
 	Include   []int  `url:"include,omitempty"`

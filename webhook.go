@@ -3,16 +3,18 @@ package woocommerce
 import (
 	"errors"
 	"fmt"
+
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+
+	"github.com/hiscaler/woocommerce-go/entity"
 )
 
 type webhookService service
 
 type WebhooksQueryParams struct {
-	queryParams
+	QueryParams
 	Search  string `url:"search"`
 	After   string `url:"after"`
 	Before  string `url:"before"`

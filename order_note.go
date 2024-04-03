@@ -2,16 +2,18 @@ package woocommerce
 
 import (
 	"fmt"
+
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/google/go-querystring/query"
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+
+	"github.com/hiscaler/woocommerce-go/entity"
 )
 
 type orderNoteService service
 
 type OrderNotesQueryParams struct {
-	queryParams
+	QueryParams
 	Type string `url:"type,omitempty"`
 }
 

@@ -3,15 +3,17 @@ package woocommerce
 import (
 	"errors"
 	"fmt"
+
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+
+	"github.com/hiscaler/woocommerce-go/entity"
 )
 
 type productAttributeService service
 
 type ProductAttributesQueryParams struct {
-	queryParams
+	QueryParams
 }
 
 func (m ProductAttributesQueryParams) Validate() error {

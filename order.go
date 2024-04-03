@@ -3,16 +3,18 @@ package woocommerce
 import (
 	"errors"
 	"fmt"
+
 	validation "github.com/go-ozzo/ozzo-validation/v4"
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+
+	"github.com/hiscaler/woocommerce-go/entity"
 )
 
 type orderService service
 
 // OrdersQueryParams orders query params
 type OrdersQueryParams struct {
-	queryParams
+	QueryParams
 	Search        string   `url:"search,omitempty"`
 	After         string   `url:"after,omitempty"`
 	Before        string   `url:"before,omitempty"`
@@ -63,7 +65,8 @@ func (m OrdersQueryParams) Validate() error {
 // All list all orders
 //
 // Usage:
-// 	params := OrdersQueryParams{
+//
+//	params := OrdersQueryParams{
 //		After: "2022-06-10",
 //	}
 //	params.PerPage = 100

@@ -3,10 +3,12 @@ package woocommerce
 import (
 	"errors"
 	"fmt"
+
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	"github.com/go-ozzo/ozzo-validation/v4/is"
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+
+	"github.com/hiscaler/woocommerce-go/entity"
 )
 
 // https://woocommerce.github.io/woocommerce-rest-api-docs/?php#customers
@@ -14,7 +16,7 @@ import (
 type customerService service
 
 type CustomersQueryParams struct {
-	queryParams
+	QueryParams
 	Search  string `url:"search,omitempty"`
 	Exclude []int  `url:"exclude,omitempty"`
 	Include []int  `url:"include,omitempty"`
