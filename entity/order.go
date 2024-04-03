@@ -88,4 +88,5 @@ type Order struct {
 	CouponLines        []CouponLine   `json:"coupon_lines"`
 	Refunds            []Refund       `json:"refunds"`
 	SetPaid            bool           `json:"set_paid"`
+	PaymentUrl         string         `json:"payment_url"`
 }
