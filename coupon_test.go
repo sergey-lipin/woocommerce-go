@@ -2,13 +2,15 @@ package woocommerce
 
 import (
 	"errors"
+	"strings"
+	"testing"
+
 	"github.com/brianvoe/gofakeit/v6"
 	"github.com/hiscaler/gox/jsonx"
 	"github.com/hiscaler/gox/randx"
-	"github.com/hiscaler/woocommerce-go/entity"
 	"github.com/stretchr/testify/assert"
-	"strings"
-	"testing"
+
+	"github.com/matewolf/woocommerce-go/entity"
 )
 
 func TestCouponService_All(t *testing.T) {

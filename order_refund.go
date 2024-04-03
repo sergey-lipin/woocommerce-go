@@ -6,7 +6,7 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	jsoniter "github.com/json-iterator/go"
 
-	"github.com/hiscaler/woocommerce-go/entity"
+	"github.com/matewolf/woocommerce-go/entity"
 )
 
 type orderRefundService service

@@ -1,8 +1,9 @@
 package woocommerce
 
 import (
-	"github.com/hiscaler/woocommerce-go/entity"
 	jsoniter "github.com/json-iterator/go"
+
+	"github.com/matewolf/woocommerce-go/entity"
 )
 
 type settingService service

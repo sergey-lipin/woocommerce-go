@@ -2,10 +2,12 @@ package woocommerce
 
 import (
 	"fmt"
-	"github.com/hiscaler/woocommerce-go/config"
-	jsoniter "github.com/json-iterator/go"
 	"os"
 	"testing"
+
+	jsoniter "github.com/json-iterator/go"
+
+	"github.com/matewolf/woocommerce-go/config"
 )
 
 var wooClient *WooCommerce
