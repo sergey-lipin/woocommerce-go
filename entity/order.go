@@ -89,4 +89,14 @@ type Order struct {
 	Refunds            []Refund       `json:"refunds"`
 	SetPaid            bool           `json:"set_paid"`
 	PaymentUrl         string         `json:"payment_url"`
+	Links              Links          `json:"_links"`
+}
+
+type Links struct {
+	Self       []Href `json:"self"`
+	Collection []Href `json:"collection"`
+}
+
+type Href struct {
+	Href string `json:"href"`
 }
