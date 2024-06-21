@@ -12,10 +12,10 @@ type LineItem struct {
 	Total       float64 `json:"total"`
 	TotalTax    float64 `json:"total_tax"`
 	Taxes       []Tax   `json:"taxes"`
-	MetaData    []Meta  `json:"meta_data"`
-	SKU         string  `json:"sku"`
-	Price       float64 `json:"price"`
-	ParentName  string  `json:"parent_name"`
+	//MetaData    []Meta  `json:"meta_data"`
+	SKU        string  `json:"sku"`
+	Price      float64 `json:"price"`
+	ParentName string  `json:"parent_name"`
 }
 
 type FeeLine struct {
@@ -26,7 +26,7 @@ type FeeLine struct {
 	Total     float64 `json:"total"`
 	TotalTax  float64 `json:"total_tax"`
 	Taxes     []Tax   `json:"taxes"`
-	MetaData  []Meta  `json:"meta_data"`
+	//MetaData  []Meta  `json:"meta_data"`
 }
 
 type CouponLine struct {
@@ -34,7 +34,7 @@ type CouponLine struct {
 	Code        string  `json:"code"`
 	Discount    float64 `json:"discount"`
 	DiscountTax float64 `json:"discount_tax"`
-	MetaData    []Meta  `json:"meta_data"`
+	//MetaData    []Meta  `json:"meta_data"`
 }
 
 type Refund struct {
@@ -45,51 +45,51 @@ type Refund struct {
 
 // Order order properties
 type Order struct {
-	ID                 int            `json:"id"`
-	ParentId           int            `json:"parent_id"`
-	Number             string         `json:"number"`
-	OrderKey           string         `json:"order_key"`
-	CreatedVia         string         `json:"created_via"`
-	Version            string         `json:"version"`
-	Status             string         `json:"status"`
-	Currency           string         `json:"currency"`
-	CurrencySymbol     string         `json:"currency_symbol"`
-	DateCreated        string         `json:"date_created"`
-	DateCreatedGMT     string         `json:"date_created_gmt"`
-	DateModified       string         `json:"date_modified"`
-	DateModifiedGMT    string         `json:"date_modified_gmt"`
-	DiscountTotal      float64        `json:"discount_total"`
-	DiscountTax        float64        `json:"discount_tax"`
-	ShippingTotal      float64        `json:"shipping_total"`
-	ShippingTax        float64        `json:"shipping_tax"`
-	CartTax            float64        `json:"cart_tax"`
-	Total              float64        `json:"total"`
-	TotalTax           float64        `json:"total_tax"`
-	PricesIncludeTax   bool           `json:"prices_include_tax"`
-	CustomerId         int            `json:"customer_id"`
-	CustomerIpAddress  string         `json:"customer_ip_address"`
-	CustomerUserAgent  string         `json:"customer_user_agent"`
-	CustomerNote       string         `json:"customer_note"`
-	Billing            Billing        `json:"billing"`
-	Shipping           Shipping       `json:"shipping"`
-	PaymentMethod      string         `json:"payment_method"`
-	PaymentMethodTitle string         `json:"payment_method_title"`
-	TransactionId      string         `json:"transaction_id"`
-	DatePaid           string         `json:"date_paid"`
-	DatePaidGMT        string         `json:"date_paid_gmt"`
-	DateCompleted      string         `json:"date_completed"`
-	DateCompletedGMT   string         `json:"date_completed_gmt"`
-	CartHash           string         `json:"cart_hash"`
-	MetaData           []Meta         `json:"meta_data"`
-	LineItems          []LineItem     `json:"line_items"`
-	TaxLines           []TaxLine      `json:"tax_lines"`
-	ShippingLines      []ShippingLine `json:"shipping_lines"`
-	FeeLines           []FeeLine      `json:"fee_lines"`
-	CouponLines        []CouponLine   `json:"coupon_lines"`
-	Refunds            []Refund       `json:"refunds"`
-	SetPaid            bool           `json:"set_paid"`
-	PaymentUrl         string         `json:"payment_url"`
-	Links              Links          `json:"_links"`
+	ID                 int      `json:"id"`
+	ParentId           int      `json:"parent_id"`
+	Number             string   `json:"number"`
+	OrderKey           string   `json:"order_key"`
+	CreatedVia         string   `json:"created_via"`
+	Version            string   `json:"version"`
+	Status             string   `json:"status"`
+	Currency           string   `json:"currency"`
+	CurrencySymbol     string   `json:"currency_symbol"`
+	DateCreated        string   `json:"date_created"`
+	DateCreatedGMT     string   `json:"date_created_gmt"`
+	DateModified       string   `json:"date_modified"`
+	DateModifiedGMT    string   `json:"date_modified_gmt"`
+	DiscountTotal      float64  `json:"discount_total"`
+	DiscountTax        float64  `json:"discount_tax"`
+	ShippingTotal      float64  `json:"shipping_total"`
+	ShippingTax        float64  `json:"shipping_tax"`
+	CartTax            float64  `json:"cart_tax"`
+	Total              float64  `json:"total"`
+	TotalTax           float64  `json:"total_tax"`
+	PricesIncludeTax   bool     `json:"prices_include_tax"`
+	CustomerId         int      `json:"customer_id"`
+	CustomerIpAddress  string   `json:"customer_ip_address"`
+	CustomerUserAgent  string   `json:"customer_user_agent"`
+	CustomerNote       string   `json:"customer_note"`
+	Billing            Billing  `json:"billing"`
+	Shipping           Shipping `json:"shipping"`
+	PaymentMethod      string   `json:"payment_method"`
+	PaymentMethodTitle string   `json:"payment_method_title"`
+	TransactionId      string   `json:"transaction_id"`
+	DatePaid           string   `json:"date_paid"`
+	DatePaidGMT        string   `json:"date_paid_gmt"`
+	DateCompleted      string   `json:"date_completed"`
+	DateCompletedGMT   string   `json:"date_completed_gmt"`
+	CartHash           string   `json:"cart_hash"`
+	//MetaData           []Meta         `json:"meta_data"`
+	LineItems     []LineItem     `json:"line_items"`
+	TaxLines      []TaxLine      `json:"tax_lines"`
+	ShippingLines []ShippingLine `json:"shipping_lines"`
+	FeeLines      []FeeLine      `json:"fee_lines"`
+	CouponLines   []CouponLine   `json:"coupon_lines"`
+	Refunds       []Refund       `json:"refunds"`
+	SetPaid       bool           `json:"set_paid"`
+	PaymentUrl    string         `json:"payment_url"`
+	Links         Links          `json:"_links"`
 }
 
 type Links struct {
