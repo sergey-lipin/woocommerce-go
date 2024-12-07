@@ -7,7 +7,7 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	jsoniter "github.com/json-iterator/go"
 
-	"github.com/matewolf/woocommerce-go/entity"
+	"github.com/sergey-lipin/woocommerce-go/entity"
 )
 
 type orderService service
@@ -44,7 +44,7 @@ func (m OrdersQueryParams) Validate() error {
 			if !ok {
 				return errors.New("无效的状态值")
 			}
-			validStatuses := []string{"any", "pending", "processing", "on-hold", "completed", "cancelled", "refunded", "failed ", "trash"}
+			validStatuses := []string{"any", "pending", "processing", "on-hold", "completed", "cancelled", "refunded", "failed", "trash"}
 			for _, status := range statuses {
 				valid := false
 				for _, validStatus := range validStatuses {

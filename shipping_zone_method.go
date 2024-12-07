@@ -6,7 +6,7 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	jsoniter "github.com/json-iterator/go"
 
-	"github.com/matewolf/woocommerce-go/entity"
+	"github.com/sergey-lipin/woocommerce-go/entity"
 )
 
 type shippingZoneMethodService service

@@ -7,7 +7,7 @@ import (
 
 	"github.com/araddon/dateparse"
 
-	"github.com/matewolf/woocommerce-go/constant"
+	"github.com/sergey-lipin/woocommerce-go/constant"
 )
 
 // ToISOTimeString Convert to iso time string

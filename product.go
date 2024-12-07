@@ -6,7 +6,7 @@ import (
 	validation "github.com/go-ozzo/ozzo-validation/v4"
 	jsoniter "github.com/json-iterator/go"
 
-	"github.com/matewolf/woocommerce-go/entity"
+	"github.com/sergey-lipin/woocommerce-go/entity"
 )
 
 type productService service
@@ -145,12 +145,12 @@ type CreateProductRequest struct {
 func (m CreateProductRequest) Validate() error {
 	return validation.ValidateStruct(&m,
 		validation.Field(&m.Name, validation.Required.Error("商品名称不能为空")),
-		validation.Field(&m.Type, validation.When(m.Type != "", validation.In("simple", "grouped", "external ", "variable").Error("无效的类型"))),
+		validation.Field(&m.Type, validation.When(m.Type != "", validation.In("simple", "grouped", "external", "variable").Error("无效的类型"))),
 		validation.Field(&m.Status, validation.When(m.Status != "", validation.In("draft", "pending", "private", "publish").Error("无效的状态"))),
 		validation.Field(&m.CatalogVisibility, validation.When(m.CatalogVisibility != "", validation.In("visible", "catalog", "search", "hidden").Error("无效的目录可见性"))),
-		validation.Field(&m.TaxStatus, validation.When(m.TaxStatus != "", validation.In("taxable", "shipping ", "none").Error("无效的税务状态"))),
-		validation.Field(&m.StockStatus, validation.When(m.StockStatus != "", validation.In("instock", "outofstock ", "onbackorder").Error("无效的库存状态"))),
-		validation.Field(&m.Backorders, validation.When(m.Backorders != "", validation.In("yes", "no ", "notify").Error("无效的缺货订单状态"))),
+		validation.Field(&m.TaxStatus, validation.When(m.TaxStatus != "", validation.In("taxable", "shipping", "none").Error("无效的税务状态"))),
+		validation.Field(&m.StockStatus, validation.When(m.StockStatus != "", validation.In("instock", "outofstock", "onbackorder").Error("无效的库存状态"))),
+		validation.Field(&m.Backorders, validation.When(m.Backorders != "", validation.In("yes", "no", "notify").Error("无效的缺货订单状态"))),
 	)
 }
 

@@ -47,7 +47,7 @@ import (
 	jsoniter "github.com/json-iterator/go"
 	"github.com/json-iterator/go/extra"
 
-	"github.com/matewolf/woocommerce-go/config"
+	"github.com/sergey-lipin/woocommerce-go/config"
 )
 
 const (
@@ -195,8 +195,7 @@ func NewClient(config config.Config) *WooCommerce {
 					params.Add("consumer_secret", config.ConsumerSecret)
 				} else {
 					// Set to header
-					client.SetAuthScheme("Basic").
-						SetAuthToken(fmt.Sprintf("%s %s", config.ConsumerKey, config.ConsumerSecret))
+					client.SetBasicAuth(config.ConsumerKey, config.ConsumerSecret)
 				}
 			} else {
 				// oAuth

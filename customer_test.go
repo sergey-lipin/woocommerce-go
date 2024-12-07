@@ -8,7 +8,7 @@ import (
 	"github.com/hiscaler/gox/jsonx"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/matewolf/woocommerce-go/entity"
+	"github.com/sergey-lipin/woocommerce-go/entity"
 )
 
 func getCustomerId(t *testing.T) {

@@ -1,4 +1,4 @@
-module github.com/matewolf/woocommerce-go
+module github.com/sergey-lipin/woocommerce-go
 
 go 1.17
 
